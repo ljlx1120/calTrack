@@ -1,19 +1,26 @@
-Calories = METS x weight (kg) x time (hours) Notes: Because 1 MET is equal to 1 kcal / kg / hour it is relatively easy to calculate energy expenditure of different physical activities. Using the formula above, you can estimate the energy expenditure value for any activity as long as you know the METS.
 
 
+Biking 8.0
+Rock-climbing 9.5
+Hiking 6.0
+Running 7.5
+Walking 3.8
+Yoga 3.0
+Skiing, Snowboarding 7.0
+Watching sports 1.5
+Grocery shopping 2.10
+Taking Epicodus class 2.17
 
-function calorieCalculator() {
-  var caloriesBurned = mets * weightInKilos * hoursOfExcercise;
-  return caloriesBurned
+
+function Activity (participatedActivity, metValue) {
+  this.participatedActivity = participatedActivity;
+  this.metValue = metValue;
+}
+
+Activity.prototype.calCalculator = function() {
+  var caloriesBurned = this.metValue * weightInKilos * hoursOfExcercise;
+  return caloriesBurned;
 };
-
-
-
-
-
-
-
-
 
 function convertMinToHours(minutes) {
   var hoursOfExcercise = minutes/60;
@@ -24,3 +31,5 @@ function convertPounds(pounds) {
   var weightInKilos = pounds * .453592;
   return weightInKilos;
 };
+
+$(document)
