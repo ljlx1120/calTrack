@@ -6,7 +6,7 @@
 
 ## Description
 
-_A website that allows user to input height, weight, activity, and age, to find out their burned calories._
+_A website that allows user to input of height, weight, activity, and age, to find out their burned calories._
 
 ## Link to repository and GH-pages
 
@@ -15,25 +15,33 @@ _A website that allows user to input height, weight, activity, and age, to find 
 
 ## Specs
 
-* _Program takes name height, weight, and zip._
-input:60inch, 150lb, 98103._
-output: '60'_
-* _Program has inputs for activity, time and distance, saves info in vars_
-input:Pick activity: running, walking, jogging._
-output:this.var input = running_
-* __
-input:pizza.prototype_
-output:some formula here_
+* _Program takes name, height, weight_
+_input: Eliot, 60inch, 150lb_
+_output: saves as variables_
 
+* _Program has inputs for activity, time and distance, saves info in vars_
+_input:Pick activity: running, walking, rock-climbing._
+_output: saves as variable_
+
+* _Program calculates the state and month to find the avg temperature that the user is working out in_
+_input: Washington, February_
+_output: 45 degrees_
+* _Program takes all variables and calculates the calories burned_
+_input: variables_
+_output: 1000 calories_
+
+* _Program can convert the calories burned to amount of pounds burned_
+_input: 1000_
+_output: 2 pounds_
+
+* _Stretch goal...Program can suggest a workout routine when the user specifies how many calories or pounds they want to burn as well as suggesting max calorie intake_
+_input: 5 pounds_
+_output: running 3x week 20 minutes at least, eating 100 calories a day_
 
 ## Setup/Installation Requirements
 
 * _Clone the project from github_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
+* _Open in browser_
 _The app depends on jquery and bootstrap CDN_
 
 ## Known Bugs
@@ -42,7 +50,8 @@ _no bugs yet!_
 
 ## Support and contact details
 
-_Reach out to me on twitter: @zachbeecher_
+_Reach out to me on twitter: @zachbeecher @ljlx1120
+_Eliot eliot.carlsen@gmail.com_
 
 ## Technologies Used
 
