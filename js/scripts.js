@@ -1,22 +1,9 @@
-function Activity (participatedActivity, metValue) {
+function Activity (participatedActivity, metValue, weight, time) {
   this.participatedActivity = participatedActivity;
   this.metValue = metValue;
+  this.weight = weight;
+  this.time = time;
 };
-
-
-var biking = new Activity ("biking", 8.0);
-var rockclimbing = new Activity ("climbing", 9.5);
-var hiking = new Activity ("hiking", 6.0);
-var running = new Activity ("running", 7.5);
-var walking = new Activity ("walking", 3.8);
-var yoga = new Activity ("yoga", 3.0);
-var skiing = new Activity ("skiing", 7.0);
-var snowboarding = new Activity ("snowboarding", 7.0);
-var watchingSports = new Activity ("watching", 1.5);
-var groceryShopping = new Activity ("grocery", 2.10);
-var takingEpicodusClass = new Activity ("epicodus", 2.17);
-
-
 
 
 Activity.prototype.calCalculator = function() {
@@ -56,6 +43,18 @@ $(document).ready(function(){
     var userTimeMinutes = parseInt($("#userTimeMinutes").val());
     convertPounds(userWeight);
     convertMinToHours(userTimeHours, userTimeMinutes);
+
+    var biking = new Activity ("biking", 8.0,);
+    var rockclimbing = new Activity ("climbing", 9.5);
+    var hiking = new Activity ("hiking", 6.0);
+    var running = new Activity ("running", 7.5);
+    var walking = new Activity ("walking", 3.8);
+    var yoga = new Activity ("yoga", 3.0);
+    var skiing = new Activity ("skiing", 7.0);
+    var snowboarding = new Activity ("snowboarding", 7.0);
+    var watchingSports = new Activity ("watching", 1.5);
+    var groceryShopping = new Activity ("grocery", 2.10);
+    var takingEpicodusClass = new Activity ("epicodus", 2.17);
 
 
   });
