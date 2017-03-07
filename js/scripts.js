@@ -5,7 +5,6 @@ function Activity (participatedActivity, metValue, weight, time) {
   this.time = time;
 };
 
-
 Activity.prototype.calCalculator = function() {
   var caloriesBurned = this.metValue * this.weight * this.time;
   return caloriesBurned;
@@ -60,7 +59,6 @@ function activityChoice (userActivity, weight, time) {
   };
 };
 
-
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
@@ -75,14 +73,11 @@ $(document).ready(function(){
     var hours = convertMinToHours(userTimeHours, userTimeMinutes);
     var caloriesExpended = activityChoice(userActivity, kilos, hours);
     var finalCalsBurned = Math.ceil(caloriesExpended);
-    console.log(finalCalsBurned)
     var poundsBurned = caloriesToPounds(caloriesExpended);
     var finalLbsBurned = poundsBurned.toFixed(2);
-    console.log(finalLbsBurned);
 
-
-
-
+    $("#show").show();
+    $("#show").append('<h3>Congratulations, ' + userFullName + '!</h3>' + '<h4>During your ' + hours.toFixed(2) + ' hours ' + userActivity + ' session, you burned ' + finalCalsBurned + ' calories! This translates to ' + finalLbsBurned + ' pounds!</h4>');
 
   });
 });
