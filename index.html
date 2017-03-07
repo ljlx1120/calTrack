@@ -16,8 +16,8 @@
          <ul>
            <li><a href="#">Home</a></li>
            <li><a href="#">About</a></li>
-           <li><a href="#">Premium</a></li>
-           <li><a href="#">Contact</a></li>
+           <li><a href="#">Premium User</a></li>
+           <li><a href="mailto:zachbeecher@gmail.com">>Contact</a></li>
          </ul>
         </nav>
       </div>
@@ -31,24 +31,121 @@
         <form>
           <div class="row">
             <div class="col-md-12">
-              <h4 class="well" img src="http://st2.depositphotos.com/1071184/5317/v/170/depositphotos_53175071-stock-illustration-man-people-athletic-gym-gymnasium.jpg" alt="workout">Calorie Tracker, pick your activity to track:</h4>
+              <div class ="well">
+                <h3 >What's your name, friend?</h3>
+              First name:<br>
+                <input type="text" name="firstname" placeholder="First Name">
+                <br>
+                Last name:<br>
+                <input type="text" name="lastname" placeholder="Last Name">
+                <br><br>
+              </div>
+              <div align="left" class="well">
+                <h3>What's your sex?</h3>
+                <input type="radio" name="group1" value="male"> Male
+                <input type="radio" name="group1" value="Butter" checked> Female
+                <input type="radio" name="group1" value="Cheese"> Other
+                <h4>What's your age and weight?</h4>
+                <p>Age:</p>
+                <input type="number" name="age" placeholder="Age">
+                <p>Weight (lbs format please):</p>
+                <input type="number" name="weight" placeholder="Weight">
+            </div>
+              <div class="well"> <h4  img src="http://st2.depositphotos.com/1071184/5317/v/170/depositphotos_53175071-stock-illustration-man-people-athletic-gym-gymnasium.jpg" alt="workout">Fit Friend's patented calorie tracker, pick your activity to track:</h4>
               <div class="form-group">
               <select class="well" name="tracker" type="text">
-                <option value="1">Running</option>
-                <option value="2">Walking</option>
-                <option value="3">Rock Climbing</option>
-                <option value="4">Hiking</option>
+                <option value="running">Running</option>
+                <option value="walking">Walking</option>
+                <option value="hiking">Hiking</option>
+                <option value="climbing">Rock Climbing</option>
+                <option value="watching">Watching Sports</option>
+                <option value="yoga">Yoga</option>
+                <option value="grocery">Grocery Shopping</option>
+                <option value="snowboarding">Skiing / Snowboarding</option>
+                <option value="epicodus">Taking Epicodus Classes</option>
+                <option value="biking">Biking</option>
               </select>
               </div>
-              <div>
-                <h4 class="well">How long did you do do the activity?</h4>
-                <select class="well" name="howlong" type="text">
-                  <option value="15">15min</option>
-                  <option value="30">30min</option>
-                  <option value="45">45min</option>
-                  <option value="60">60min</option>
-                </select>
+            </div>
+              <div class="well">
+                <h4>How long did you do do the activity?</h4>
+                <select name="selHour">
+            <option selected="selected" value="">Select Hour(s)</option>
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+        </select>
+        <select name="selMin">
+            <option selected="selected" value="">Select Minutes</option>
+            <option value="00">00</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="47">47</option>
+            <option value="48">48</option>
+            <option value="49">49</option>
+            <option value="50">50</option>
+            <option value="51">51</option>
+            <option value="52">52</option>
+            <option value="53">53</option>
+            <option value="54">54</option>
+            <option value="55">55</option>
+            <option value="56">56</option>
+            <option value="57">57</option>
+            <option value="58">58</option>
+            <option value="59">59</option>
+        </select>
               </div>
+
 
             </div>
           </div>
