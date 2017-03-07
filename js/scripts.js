@@ -11,7 +11,7 @@ Activity.prototype.calCalculator = function() {
 };
 
 function caloriesToPounds (caloriesBurned) {
-  var poundsBurned = caloriesBurned/4000;
+  var poundsBurned = caloriesBurned/3500;
   return poundsBurned;
 };
 
@@ -62,7 +62,6 @@ function activityChoice (userActivity, weight, time) {
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
-
     var userFirstName = $("#userFirstName").val();
     var userLastName = $("#userLastName").val();
     var userFullName = userFirstName + " " + userLastName;
@@ -76,13 +75,16 @@ $(document).ready(function(){
     var finalCalsBurned = Math.ceil(caloriesExpended);
     var poundsBurned = caloriesToPounds(caloriesExpended);
     var finalLbsBurned = poundsBurned.toFixed(2);
-
     if ((userFirstName === "") || (userLastName === "") || ($("#userWeight").val()==="") || (userActivity === "")){
       alert ("Oops, please enter values in all fields.");
     } else {
       $("#show").show();
-      $("#show").append('<h3>Congratulations, ' + userFullName + '!</h3>' + '<h4>During your ' + hours.toFixed(2) + ' hours ' + userActivity + ' session, you burned ' + finalCalsBurned + ' calories! This translates to ' + finalLbsBurned + ' pounds!</h4>');
+      $("#show").append('<h3>Congratulations, ' + userFullName + '!</h3>' + '<h4>During your ' + hours.toFixed(2) + ' hour(s) ' + userActivity + ' session, you burned ' + finalCalsBurned + ' calories! This translates to ' + finalLbsBurned + ' pounds!</h4>');
     };
-
   });
+  // $().submit(function(event){
+  //   event.preventDefault();
+  //   var poundsGoal = $("#userPoundInput").val();
+  //   var calGoal = $("#userCalInput").val();
+  //   var preferredActivity =
 });
