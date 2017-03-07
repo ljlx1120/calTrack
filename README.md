@@ -23,9 +23,6 @@ _output: saves as variables_
 _input:Pick activity: running, walking, rock-climbing._
 _output: saves as variable_
 
-* _Program calculates the state and month to find the avg temperature that the user is working out in_
-_input: Washington, February_
-_output: 45 degrees_
 * _Program takes all variables and calculates the calories burned_
 _input: variables_
 _output: 1000 calories_
