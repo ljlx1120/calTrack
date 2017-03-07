@@ -34,15 +34,15 @@
                 <div class ="well">
                   <h3 >What's your name, friend?</h3>
                 First name:<br>
-                  <input type="text" name="firstname" placeholder="First Name">
+                  <input id="userFirstName" type="text" name="firstname" placeholder="First Name">
                   <br>
                   Last name:<br>
-                  <input type="text" name="lastname" placeholder="Last Name">
+                  <input id="userLastName" type="text" name="lastname" placeholder="Last Name">
                   <br><br>
                 </div>
 
                 <div align="left" class="well">
-                  <h3>What's your sex?</h3>
+                  <h3>What's your gender?</h3>
                   <input type="radio" name="group1" value="male"> Male
                   <input type="radio" name="group1" value="Butter" checked> Female
                   <input type="radio" name="group1" value="Cheese"> Other
@@ -50,13 +50,13 @@
                   <p>Age:</p>
                   <input type="number" name="age" placeholder="Age">
                   <p>Weight (lbs format please):</p>
-                  <input type="number" name="weight" placeholder="Weight">
+                  <input id="userWeight" ype="number" name="weight" placeholder="Weight">
               </div>
 
                 <div class="well">
                   <h4  img src="http://st2.depositphotos.com/1071184/5317/v/170/depositphotos_53175071-stock-illustration-man-people-athletic-gym-gymnasium.jpg" alt="workout">Fit Friend's patented calorie tracker, pick your activity to track:</h4>
                   <div class="form-group">
-                    <select class="well" name="tracker" type="text">
+                    <select id="userActivity" class="well" name="tracker" type="text">
                       <option value="running">Running</option>
                       <option value="walking">Walking</option>
                       <option value="hiking">Hiking</option>
@@ -72,7 +72,7 @@
                 </div>
                 <div class="well">
                   <h4>How long did you do do the activity?</h4>
-                  <select name="selHour">
+                  <select id="userTimeHours" name="selHour">
                     <option selected="selected" value="">Select Hour(s)</option>
                     <option value="00">00</option>
                     <option value="01">01</option>
@@ -84,7 +84,7 @@
                     <option value="07">07</option>
                     <option value="08">08</option>
                   </select>
-                  <select name="selMin">
+                  <select id="userTimeMinutes" name="selMin">
                     <option selected="selected" value="">Select Minutes</option>
                     <option value="00">00</option>
                     <option value="01">01</option>
