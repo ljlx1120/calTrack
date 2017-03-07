@@ -7,16 +7,14 @@ function Activity (participatedActivity, metValue, weight, time) {
 
 
 Activity.prototype.calCalculator = function() {
-  console.log("calCalculator")
   var caloriesBurned = this.metValue * this.weight * this.time;
-  console.log(caloriesBurned);
   return caloriesBurned;
 };
 
-Activity.prototype.lbCalculator = function() {
+function caloriesToPounds (caloriesBurned) {
   var poundsBurned = caloriesBurned/4000;
   return poundsBurned;
-}
+};
 
 function convertMinToHours(hours, minutes) {
   var hoursOfExcercise = hours + minutes/60;
@@ -30,15 +28,35 @@ function convertPounds(pounds) {
 
 function activityChoice (userActivity, weight, time) {
   if(userActivity === "biking"){
-    console.log("Made it in the if")
     var biking = new Activity ("biking", 8.0, weight, time);
-    biking.calCalculator();
-    console.log(biking.weight);
-    console.log(biking.time);
-    console.log(biking.calCalculator());
-
-  } else {
-    console.log("at end of activityChoice");
+    return biking.calCalculator();
+  } else if (userActivity === "rockclimbing"){
+    var rockclimbing = new Activity ("climbing", 9.5, weight, time);
+    return rockclimbing.calCalculator();
+  } else if (userActivity === "hiking") {
+    var hiking = new Activity ("hiking", 6.0, weight, time);
+    return hiking.calCalculator();
+  } else if (userActivity === "running"){
+    var running = new Activity ("running", 7.5, weight, time);
+    return running.calCalculator();
+  } else if (userActivity === "walking"){
+    var walking = new Activity ("walking", 3.8, weight, time);
+    return walking.calCalculator();
+  } else if (userActivity === "yoga"){
+    var yoga = new Activity ("yoga", 3.0, weight, time);
+    return yoga.calCalculator();
+  } else if (userActivity === "snowboarding"){
+    var snowboarding = new Activity ("snowboarding", 7.0, weight, time);
+    return snowboarding.calCalculator();
+  } else if (userActivity === "watching"){
+    var watchingSports = new Activity ("watching", 1.5, weight, time);
+    return watchingSports.calCalculator();
+  } else if (userActivity === "grocery"){
+    var groceryShopping = new Activity ("grocery", 2.10, weight, time);
+    return groceryShopping.calCalculator();
+  } else if (userActivity === "epicodus"){
+    var takingEpicodusClass = new Activity ("epicodus", 2.17, weight, time);
+    return takingEpicodusClass.calCalculator();
   };
 };
 
@@ -55,21 +73,15 @@ $(document).ready(function(){
     var userTimeMinutes = parseInt($("#userTimeMinutes").val());
     var kilos = convertPounds(userWeight);
     var hours = convertMinToHours(userTimeHours, userTimeMinutes);
-    console.log(kilos);
-    console.log(hours);
-    activityChoice(userActivity, kilos, hours);
+    var caloriesExpended = activityChoice(userActivity, kilos, hours);
+    var finalCalsBurned = Math.ceil(caloriesExpended);
+    console.log(finalCalsBurned)
+    var poundsBurned = caloriesToPounds(caloriesExpended);
+    var finalLbsBurned = poundsBurned.toFixed(2);
+    console.log(finalLbsBurned);
 
 
-    // var rockclimbing = new Activity ("climbing", 9.5, weightInKilos, hoursOfExcercise);
-    // var hiking = new Activity ("hiking", 6.0, weightInKilos, hoursOfExcercise);
-    // var running = new Activity ("running", 7.5, weightInKilos, hoursOfExcercise);
-    // var walking = new Activity ("walking", 3.8, weightInKilos, hoursOfExcercise);
-    // var yoga = new Activity ("yoga", 3.0, weightInKilos, hoursOfExcercise);
-    // var skiing = new Activity ("skiing", 7.0, weightInKilos, hoursOfExcercise);
-    // var snowboarding = new Activity ("snowboarding", 7.0, weightInKilos, hoursOfExcercise);
-    // var watchingSports = new Activity ("watching", 1.5, weightInKilos, hoursOfExcercise);
-    // var groceryShopping = new Activity ("grocery", 2.10, weightInKilos, hoursOfExcercise);
-    // var takingEpicodusClass = new Activity ("epicodus", 2.17, weightInKilos, hoursOfExcercise);
+
 
 
   });
