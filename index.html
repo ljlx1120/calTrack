@@ -10,13 +10,13 @@
   </head>
   <body background="images/background.jpg">
     <div class="container">
-      <header>
+      <header class="header">
         <h1 class="logo"></h1>
           <nav class="navbar navbar-default navbar-fixed-top">
            <ul>
-             <li><a href="#">Home</a></li>
-             <li><a href="#">About</a></li>
-             <li><a href="#">Premium User</a></li>
+             <li><a href="index.html">Home</a></li>
+             <li><a href="about.html">About</a></li>
+             <li><a href="plan.html">Your workout plan</a></li>
              <li><a href="mailto:zachbeecher@gmail.com">Contact</a></li>
            </ul>
           </nav>
@@ -44,7 +44,7 @@
                   <input type="radio" name="group1" value="male"> Male
                   <input type="radio" name="group1" value="Butter" checked> Female
                   <input type="radio" name="group1" value="Cheese"> Other
-                  <h4>What's your age and weight?</h4>
+                  <h3>What's your age and weight?</h3>
                   <p>Age:</p>
                   <input type="number" name="age" placeholder="Age">
                   <p>Weight (lbs format please):</p>
@@ -165,7 +165,7 @@
             </div>
 
             <div class="col-md-8"  style="text-align:center;">
-              <button type="submit">Click here to submit your activity</button>
+              <button type="submit" id="buttonClick">Click here to submit your activity</button>
             </div>
           </form>
 
