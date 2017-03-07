@@ -15,25 +15,29 @@ _A website that allows user to input of height, weight, activity, and age, to fi
 
 ## Specs
 
-* _Program takes name, height, weight_
-_input: Eliot, 60inch, 150lb_
-_output: saves as variables_
+* _Program takes name, height, weight, age_
+* _input: Eliot, 60inch, 150lb, 35yo_
+* _output: saves as variables_
 
 * _Program has inputs for activity, time and distance, saves info in vars_
-_input:Pick activity: running, walking, rock-climbing._
-_output: saves as variable_
+* _input:Pick activity: running, walking, rock-climbing._
+* _output: saves as variable_
+
+* _Program takes all variable inputs and translates them to appropriate units of measurement_
+* _input: 165 pounds_
+* _output: xxx kg_
 
 * _Program takes all variables and calculates the calories burned_
-_input: variables_
-_output: 1000 calories_
+* _input: variables_
+* _output: 1000 calories_
 
 * _Program can convert the calories burned to amount of pounds burned_
-_input: 1000_
-_output: 2 pounds_
+* _input: 1000_
+* _output: 2 pounds_
 
 * _Stretch goal...Program can suggest a workout routine when the user specifies how many calories or pounds they want to burn as well as suggesting max calorie intake_
-_input: 5 pounds_
-_output: running 3x week 20 minutes at least, eating 100 calories a day_
+* _input: 5 pounds_
+* _output: running 3x week 20 minutes at least, eating 100 calories a day_
 
 ## Setup/Installation Requirements
 
