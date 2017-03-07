@@ -23,6 +23,11 @@ Activity.prototype.calCalculator = function() {
   return caloriesBurned;
 };
 
+Activity.prototype.lbCalculator = function() {
+  var poundsBurned = caloriesBurned/4000;
+  return poundsBurned;
+}
+
 function convertMinToHours(minutes) {
   var hoursOfExcercise = minutes/60;
   return hoursOfExcercise;
