@@ -5,10 +5,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/planscripts.js"></script>
     <title>Fit Friend</title>
   </head>
-  <body background="images/background.jpg">
+  <body background="images/bakgroundnew.jpg">
     <div class="container">
       <header class="header">
         <h1 class="logo"></h1>
@@ -16,18 +16,87 @@
            <ul>
              <li><a href="index.html">Home</a></li>
              <li><a href="about.html">About</a></li>
-             <li><a href="plan.html">Your workout plan</a></li>
+             <li><a href="plan.html">Devise your workout plan</a></li>
              <li><a href="mailto:zachbeecher@gmail.com">Contact</a></li>
            </ul>
           </nav>
         </header>
       <div class="jumbotron">
-        <img src="http://i.huffpost.com/gen/1496787/images/o-HEALTHY-FOOD-facebook.jpg" id="backgroundImage">
-        <h2>Fit Friend</h2>
+        <img src="images/banner.jpg" id="backgroundImage">
       </div>
       <div>
-        <h1 class="well">Your workout plan</h1>
-      
+        <h1 class="well">Your workout plan:</h1>
+        <form>
+          <div class="row">
+            <div class ="well col-md-6 col-lg-offset-3" style="text-align:center;">
+              <h3 >What's your name, friend?</h3>
+            First name:<br>
+              <input id="userFirstName" type="text" name="firstname" placeholder="First Name">
+              <br>
+              Last name:<br>
+              <input id="userLastName" type="text" name="lastname" placeholder="Last Name">
+              <br><br>
+            </div>
+          </div>
+
+          <div class="row">
+            <div align="left" class="well col-md-6 col-lg-offset-3" style="text-align:center;">
+              <h3>What's your gender?</h3>
+              <input type="radio" name="group1" value="male"> Male
+              <input type="radio" name="group1" value="Butter" checked> Female
+              <input type="radio" name="group1" value="Cheese"> Other
+              <h3>What's your age and weight?</h3>
+              <p>Age:</p>
+              <input type="number" name="age" min="1" max="100" placeholder="Age">
+              <p>Weight (lbs format please):</p>
+              <input id="userWeight" min="1" max="500" type="number" name="weight" placeholder="Weight">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="well col-md-6 col-lg-offset-3" style="text-align:center;">
+              <h4>Fit Friend's patented calorie tracker, pick your activity to track:</h4>
+              <div class="form-group options option">
+                <select id="userActivity" class="well icon-menu" name="tracker" type="text">
+                  <option style="padding-left:0px;" value="">Select an activity</option>
+                  <label>
+                  <option value="running">Running</option>
+                  <option value="walking">Walking</option>
+                  <option value="hiking">Hiking</option>
+                  <option value="rockclimbing">Rock Climbing</option>
+                  <option value="watching">Watching Sports</option>
+                  <option value="yoga">Yoga</option>
+                  <option value="grocery">Grocery Shopping</option>
+                  <option value="snowboarding">Skiing/Snowboarding</option>
+                  <option value="epicodus">Taking Epicodus Classes</option>
+                  <option class="bike" value="biking">Biking</option>
+                </select>
+                <div class="pics">
+                  <img class="thumb" src ="images/biking.png">
+                  <img class="thumb" src ="images/climbing.png">
+                  <img class="thumb" src ="images/hiking.png">
+                  <img class="thumb" src ="images/running.png">
+                  <img class="thumb" src ="images/yoga.png">
+                </div>
+                <div class="pics">
+                  <img class="thumb" src ="images/snowboarding.png">
+                  <img class="thumb" src ="images/walking.png">
+                  <img class="thumb" src ="images/epicodus.png">
+                  <img class="thumb" src ="images/grocery.png">
+                  <img class="thumb" src ="images/watching.png">
+              </div>
+            </div>
+            <div class="well">
+              <h4>How many pounds (lbs) would you like to lose?</h4>
+              <p>Weight (lbs format please):</p>
+              <input id="userLose" min="1" max="500" type="number" name="weight" placeholder="lbs">
+          </div>
+        </div>
+        <div class="btn col-md-12"  style="text-align:center;">
+          <button type="submit" id="buttonClick2">Click here to submit your activity</button>
+        </div>
+      </form>
+
 
 
 
