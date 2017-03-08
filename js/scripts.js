@@ -58,10 +58,21 @@ function activityChoice (userActivity, weight, time) {
     return takingEpicodusClass.calCalculator();
   };
 };
-
+function bmr (gender, weight, height, age) {
+  if (gender === "male"){
+    var maleBmr = (66 +(6.23*weight)+(12.7 * height) - (6.8* age));
+    return maleBmr;
+  } else if (gender ==="female"){
+    var femaleBmr = (655 +(4.35*weight)+(4.7 * height) - (4.7 * age));
+    return femaleBmr;
+  }
+};
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
+    var userAge = parseInt($("#userAge").val());
+    var userHeight = $("#userHeight").val();
+    var userGender = $('input[name=group1]:checked').val();
     var userFirstName = $("#userFirstName").val();
     var userLastName = $("#userLastName").val();
     var userFullName = userFirstName + " " + userLastName;
@@ -74,6 +85,7 @@ $(document).ready(function(){
     var caloriesExpended = activityChoice(userActivity, kilos, hours);
     var finalCalsBurned = Math.ceil(caloriesExpended);
     var poundsBurned = caloriesToPounds(caloriesExpended);
+    bmr(userGender,userWeight,userHeight,userAge);
     var finalLbsBurned = poundsBurned.toFixed(2);
     if ((userFirstName === "") || (userLastName === "") || ($("#userWeight").val()==="") || (userActivity === "")){
       alert ("Oops, please enter values in all fields.");
