@@ -121,3 +121,18 @@ img#jumbopic {
 #result {
   display: none;
 }
+
+.breakfast{
+  width:350px;
+  height: 350px;
+}
+
+#mealpics {
+  display: none;
+  margin-left: 90px;
+}
+
+#clickme {
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -100,4 +100,9 @@ $(document).ready(function(){
       };
     };
   });
+
+  $("#clickme").click(function(event){
+  event.preventDefault();
+  $("#mealpics").toggle();
+  });
 });
