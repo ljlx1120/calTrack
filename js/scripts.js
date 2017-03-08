@@ -83,9 +83,4 @@ $(document).ready(function(){
       $("#show").append('<h3>Congratulations, ' + userFullName + '!</h3>' + '<h4>During your ' + hours.toFixed(2) + ' hour(s) ' + userActivity + ' session, you burned ' + finalCalsBurned + ' calories! This translates to ' + finalLbsBurned + ' pounds!</h4>');
     };
   });
-  // $().submit(function(event){
-  //   event.preventDefault();
-  //   var poundsGoal = $("#userPoundInput").val();
-  //   var calGoal = $("#userCalInput").val();
-  //   var preferredActivity =
 });
