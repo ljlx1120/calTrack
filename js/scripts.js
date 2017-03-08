@@ -78,6 +78,7 @@ $(document).ready(function(){
     if ((userFirstName === "") || (userLastName === "") || ($("#userWeight").val()==="") || (userActivity === "")){
       alert ("Oops, please enter values in all fields.");
     } else {
+      $("#show").empty();
       $("#show").show();
       $("#show").append('<h3>Congratulations, ' + userFullName + '!</h3>' + '<h4>During your ' + hours.toFixed(2) + ' hour(s) ' + userActivity + ' session, you burned ' + finalCalsBurned + ' calories! This translates to ' + finalLbsBurned + ' pounds!</h4>');
     };
