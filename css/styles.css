@@ -85,17 +85,15 @@ nav a::before {
 nav a:hover::before {
   width: 100%;
 }
-#thumb{
-  width:10%;
-}
 
-#pics {
-  /*display: none;*/
+.thumb{
+  width:10%;
 }
 
 #show {
   display: none;
 }
+
 h2{
 color: #000000; font-family: 'Open Sans', sans-serif; font-size: 94px; font-weight: 300; line-height: 1px; margin: 0 0 16px; text-align: center; text-shadow: 2px: padding: 5px;padding: .5em 1em ; background: #333; color: #fff; overflow: hidden;
 
