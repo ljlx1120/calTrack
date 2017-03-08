@@ -59,7 +59,10 @@ function bmr (gender, weight, height, age) {
   } else if (gender ==="female"){
     var femaleBmr = (655 +(4.35*weight)+(4.7 * height) - (4.7 * age));
     return femaleBmr;
-  }
+  } else if (gender === "other") {
+    var otherBmr = (655 +(4.35*weight)+(4.7 * height) - (4.7 * age));
+    return otherBmr;
+  };
 };
 
 
