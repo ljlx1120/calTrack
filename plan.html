@@ -47,7 +47,7 @@
               <input type="radio" name="group1" value="Cheese"> Other
               <h3>What's your age and weight?</h3>
               <p>Age:</p>
-              <input type="number" name="age" min="1" max="100" placeholder="Age">
+              <input id="age" type="number" min="1" max="100" placeholder="Age">
               <p>Weight (lbs format please):</p>
               <input id="userScaleWeight" min="1" max="500" type="number" name="weight" placeholder="Weight">
             </div>
@@ -90,16 +90,15 @@
               <h4>How many pounds (lbs) would you like to lose?</h4>
               <p>Weight (lbs format please):</p>
               <input id="userPoundInput" min="1" max="500" type="number" name="weight" placeholder="lbs">
+            </div>
           </div>
-        </div>
-        <div class="btn col-md-12"  style="text-align:center;">
-          <button type="submit" id="buttonClick2">Click here to submit your activity</button>
-        </div>
-      </form>
-
-
-
-
-    </div>
+          <div class="btn col-md-12"  style="text-align:center;">
+            <button type="submit" id="buttonClick2">Click here to submit your activity</button>
+          </div>
+        </form>
+      </div>
+      <div class="well" id="result">
+  
+      </div>
   </body>
 </html>

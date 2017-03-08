@@ -55,19 +55,36 @@ function activityChoice (userActivity, kiloWeight, calsGoal) {
 
 
 
-
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
+    var firstName = $("#userFirstName").val();
+    var lastName = $("#userLastName").val();
+    var fullName = firstName + " " + lastName;
+    var userAge = parseInt($("#age").val());
     var poundsGoal = parseInt($("#userPoundInput").val());
     var preferredActivity = $("#userActivityChoice").val();
     var userWeight = parseInt($("#userScaleWeight").val());
     var calsGoal = poundsToCalories(poundsGoal);
     var kiloWeight = convertPounds(userWeight);
-    console.log(convertPounds(userWeight));
-    console.log(poundsToCalories(poundsGoal));
-    var timeNeededToWorkout = activityChoice(preferredActivity, kiloWeight, calsGoal);
-    console.log(timeNeededToWorkout);
+    var timeNeededToWorkout = Math.ceil(activityChoice(preferredActivity, kiloWeight, calsGoal));
 
+    if ((firstName === "") || (lastName === "") || ($("#userScaleWeight").val()==="") || (preferredActivity === "") || ($("#userPoundInput").val()==="") || ($("#age").val()==="")){
+      alert ("Oops, please enter values in all fields.");
+    } else {
+      if (userAge < 50){
+        var weeksOfWorkout = parseInt(timeNeededToWorkout/6);
+        var hoursLeftOver = timeNeededToWorkout%6;
+        $("#result").empty();
+        $("#result").show();
+        $("#result").append('<h3>Congratulations, ' + fullName + '!</h3><p>We are here to help you meet your goals. To lose ' + poundsGoal + 'lbs, you will want to go ' + preferredActivity + ' for a total of ' + timeNeededToWorkout + ' hours. This can be broken up into ' + weeksOfWorkout + ' weeks and ' + hoursLeftOver + ' hours for 3 times a week and 2 hours per day.</p>');
+      } else if (userAge >= 50) {
+        $("#result").empty();
+        $("#result").show();
+        var weeksOfWorkout = parseInt(timeNeededToWorkout/4);
+        var hoursLeftOver = timeNeededToWorkout%4;
+        $("#result").append('<h3>Congratulations, ' + fullName + '!</h3><p>We are here to help you meet your goals. To lose ' + poundsGoal + 'lbs, you will want to go ' + preferredActivity + ' for a total of ' + timeNeededToWorkout + ' hours. This can be broken up into ' + weeksOfWorkout + ' weeks and ' + hoursLeftOver + ' hours for 2 times a week and 2 hours per day.</p>');
+      };
+    };
   });
 });
