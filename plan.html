@@ -24,8 +24,7 @@
       <div class="jumbotron">
         <img src="images/banner.jpg" id="jumbopic">
       </div>
-
-      <h1 class="well">Your workout plan:</h1>
+      <h1 class="well col-md-6 col-lg-offset-3" id="textAlign">Your workout plan:</h1>
       <form>
         <div class="row">
           <div class ="well col-md-6 col-lg-offset-3" style="text-align:center;">
@@ -36,6 +35,11 @@
             Last name:<br>
             <input id="userLastName" type="text" name="lastname" placeholder="Last Name">
             <br><br>
+            <div class="well">
+              <h4>How many pounds (lbs) would you like to lose?</h4>
+              <p>Weight (lbs format please):</p>
+              <input id="userPoundInput" min="1" max="500" type="number" name="weight" placeholder="lbs">
+            </div>
           </div>
         </div>
 
@@ -121,11 +125,6 @@
                 <img class="thumb" src ="images/grocery.png">
                 <img class="thumb" src ="images/watching.png">
             </div>
-          </div>
-          <div class="well">
-            <h4>How many pounds (lbs) would you like to lose?</h4>
-            <p>Weight (lbs format please):</p>
-            <input id="userPoundInput" min="1" max="500" type="number" name="weight" placeholder="lbs">
           </div>
         </div>
         <div class="btn col-md-12"  style="text-align:center;">
