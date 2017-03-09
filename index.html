@@ -5,70 +5,113 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/planscripts.js"></script>
     <title>Fit Friend</title>
   </head>
   <body background="images/bakgroundnew.jpg">
     <div class="container">
-      <header class="header">
-        <h1 class="logo"></h1>
-          <nav class="navbar navbar-default navbar-fixed-top">
-           <ul>
-             <li><a href="plan.html">Make a Plan</a></li>
-             <li><a href="index.html">Calorie Counter</a></li>
-             <li><a href="about.html">About</a></li>
-             <li><a href="mailto:zachbeecher@gmail.com">Contact</a></li>
-           </ul>
-          </nav>
-        </header>
-
+        <header class="header">
+          <h1 class="logo"></h1>
+            <nav class="navbar navbar-default navbar-fixed-top">
+             <ul>
+               <li><a href="index.html">Make a Plan</a></li>
+               <li><a href="calCounter.html">Calorie Counter</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="mailto:zachbeecher@gmail.com">Contact</a></li>
+             </ul>
+            </nav>
+          </header>
         <div class="jumbotron">
-          <img id="jumbopic" src="images/banner.jpg" id="backgroundImage">
+          <img src="images/banner.jpg" id="jumbopic">
         </div>
-
-        <form>
-          <div class="row">
-            <div class ="well col-md-6 col-lg-offset-3" style="text-align:center;">
-              <h3 >What's your name, friend?</h3>
-            First name:<br>
-              <input id="userFirstName" type="text" name="firstname" placeholder="First Name">
-              <br>
-              Last name:<br>
-              <input id="userLastName" type="text" name="lastname" placeholder="Last Name">
-              <br><br>
+        <div class="well wellAlignment">
+        <div>
+          <h1 class="well col-md-6 col-lg-offset-3" align="center" id="wellPop">Your workout plan:</h1>
+          <form>
+            <div class="row">
+              <div class ="well col-md-6 col-lg-offset-3" id="wellPop"style="text-align:center;">
+                <h3 >What's your name, friend?</h3>
+              First name:<br>
+                <input id="userFirstName" type="text" name="firstname" placeholder="First Name" class="border">
+                <br>
+                Last name:<br>
+                <input id="userLastName" type="text" name="lastname" placeholder="Last Name" class="border">
+                <br><br>
+                <div class="well">
+                  <h4>How many pounds (lbs) would you like to lose?</h4>
+                  <p>Weight (lbs format please):</p>
+                  <input id="userPoundInput" min="1" max="500" type="number" name="weight" placeholder="lbs" class="border">
+                </div>
+              </div>
             </div>
           </div>
-
           <div class="row">
-            <div align="left" class="well col-md-6 col-lg-offset-3" style="text-align:center;">
+            <div align="left" class="well col-md-6 col-lg-offset-3" id="wellPop" style="text-align:center;">
               <h3>What's your gender?</h3>
               <input type="radio" name="group1" value="male"> Male
               <input type="radio" name="group1" value="female" checked> Female
               <input type="radio" name="group1" value="other"> Other
               <h3>What's your age and weight?</h3>
               <p>Age:</p>
-              <input id="userAge"type="number" name="age" min="1" max="100" placeholder="Age">
+              <input id="age" type="number" min="1" max="100" placeholder="Age" class="border">
               <p>Weight (lbs format please):</p>
-              <input id="userWeight" min="1" max="500" type="number" name="weight" placeholder="lbs">
+              <input id="userScaleWeight" min="1" max="500" type="number" name="weight" placeholder="lbs" class="border">
+              <h3> What's your height?</h3>
+              <select id="userHeight" class="border" onfocus='this.size=10;'onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                <option value="52">4'4"</option>
+                <option value="53">4'5"</option>
+                <option value="54">4'6"</option>
+                <option value="55">4'7"</option>
+                <option value="56">4'8"</option>
+                <option value="57">4'9"</option>
+                <option value="58">4'10"</option>
+                <option value="59">4'11"</option>
+                <option value="60">5'</option>
+                <option value="61">5'1"</option>
+                <option value="62">5'2"</option>
+                <option value="63">5'3"</option>
+                <option value="64">5'4"</option>
+                <option value="65">5'5"</option>
+                <option value="66">5'6"</option>
+                <option value="67">5'7"</option>
+                <option value="68">5'8"</option>
+                <option value="69">5'9"</option>
+                <option value="70">5'10"</option>
+                <option value="71">5'11"</option>
+                <option value="72">6'</option>
+                <option value="73">6'1"</option>
+                <option value="74">6'2"</option>
+                <option value="75">6'3"</option>
+                <option value="76">6'4"</option>
+                <option value="77">6'5"</option>
+                <option value="78">6'6"</option>
+                <option value="79">6'7"</option>
+                <option value="80">6'8"</option>
+                <option value="81">6'9"</option>
+                <option value="82">6'10"</option>
+                <option value="83">6'11"</option>
+                <option value="84">7'</option>
+              </select>
             </div>
           </div>
+
           <div class="row">
-            <div class="well col-md-6 col-lg-offset-3" style="text-align:center;">
+            <div class="well col-md-6 col-lg-offset-3" id="wellPop" style="text-align:center;">
               <h4>Fit Friend's patented calorie tracker, pick your activity to track:</h4>
               <div class="form-group options option">
-                <select id="userActivity" class="well icon-menu" name="tracker" type="text">
+                <select id="userActivityChoice" class="well border icon-menu" name="tracker">
                   <option style="padding-left:0px;" value="">Select an activity</option>
                   <label>
                   <option value="running">Running</option>
                   <option value="walking">Walking</option>
                   <option value="hiking">Hiking</option>
                   <option value="rockclimbing">Rock Climbing</option>
-                  <option value="watching">Watching Sports</option>
-                  <option value="yoga">Yoga</option>
-                  <option value="grocery">Grocery Shopping</option>
+                  <option value="watch sports">Watching Sports</option>
+                  <option value="do yoga">Yoga</option>
+                  <option value="grocery shopping">Grocery Shopping</option>
                   <option value="snowboarding">Skiing/Snowboarding</option>
-                  <option value="epicodus">Taking Epicodus Classes</option>
-                  <option class="bike" value="biking">Biking</option>
+                  <option value="to epicodus class">Taking Epicodus Classes</option>
+                  <option value="biking">Biking</option>
                 </select>
                 <div class="pics">
                   <img class="thumb" src ="images/biking.png">
@@ -85,93 +128,25 @@
                   <img class="thumb" src ="images/watching.png">
               </div>
             </div>
-            <div class="well">
-              <h4>How long did you do do the activity?</h4>
-              <select id="userTimeHours" name="selHour">
-                <option value="0">Select Hour(s)</option>
-                <option value="0">00</option>
-                <option value="1">01</option>
-                <option value="2">02</option>
-                <option value="3">03</option>
-                <option value="4">04</option>
-                <option value="5">05</option>
-                <option value="6">06</option>
-                <option value="7">07</option>
-                <option value="8">08</option>
-              </select>
-              <select id="userTimeMinutes" name="selMin">
-                <option value="0">Select Minutes</option>
-                <option value="0">00</option>
-                <option value="1">01</option>
-                <option value="2">02</option>
-                <option value="3">03</option>
-                <option value="4">04</option>
-                <option value="5">05</option>
-                <option value="6">06</option>
-                <option value="7">07</option>
-                <option value="8">08</option>
-                <option value="9">09</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">25</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-                <option value="32">32</option>
-                <option value="33">33</option>
-                <option value="34">34</option>
-                <option value="35">35</option>
-                <option value="36">36</option>
-                <option value="37">37</option>
-                <option value="38">38</option>
-                <option value="39">39</option>
-                <option value="40">40</option>
-                <option value="41">41</option>
-                <option value="42">42</option>
-                <option value="43">43</option>
-                <option value="44">44</option>
-                <option value="45">45</option>
-                <option value="46">46</option>
-                <option value="47">47</option>
-                <option value="48">48</option>
-                <option value="49">49</option>
-                <option value="50">50</option>
-                <option value="51">51</option>
-                <option value="52">52</option>
-                <option value="53">53</option>
-                <option value="54">54</option>
-                <option value="55">55</option>
-                <option value="56">56</option>
-                <option value="57">57</option>
-                <option value="58">58</option>
-                <option value="59">59</option>
-              </select>
-            </div>
+          </div>
+          <div class="btn col-md-12"  style="text-align:center;">
+            <button type="submit" id="buttonClick2">Click here to submit your activity</button>
+          </div>
+        </form>
+        </div>
+        <div class="well" id="result">
+        </div>
+
+            <h4 style="text-align:center"><span id="clickme">Click here to get help</span> with your healthy meal plans</h4>
+          <div id="mealpics">
+            <img class="breakfast" src="images/breakfast.png">
+            <img class="breakfast" src="images/lunch.png">
+            <img class="breakfast" src="images/dinner1.png">
+            <img class="breakfast" src="images/dinner2.png">
+            <img class="breakfast" src="images/dinner3.png">
           </div>
         </div>
-        <div class="btn col-md-12"  style="text-align:center;">
-          <button type="submit" id="buttonClick">Click here to submit your activity</button>
-        </div>
-      </form>
-
-      <div id="show" class="col-md-6 well col-lg-offset-3" style="text-align:center;">
-
       </div>
+    </div>
   </body>
 </html>
