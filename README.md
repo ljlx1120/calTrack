@@ -10,7 +10,7 @@ _A website that allows user to input of height, weight, activity, and age, to fi
 
 ## Link to repository and GH-pages
 
-* https://github.com/ziggity/calorieTracker
+* _https://ziggity.github.io/calorieTracker/_
 * _GH-Pages link here_
 
 ## Specs
@@ -35,7 +35,7 @@ _A website that allows user to input of height, weight, activity, and age, to fi
 * _input: 1000_
 * _output: 2 pounds_
 
-* _Stretch goal...Program can suggest a workout routine when the user specifies how many calories or pounds they want to burn as well as suggesting max calorie intake_
+* _Program can suggest a workout routine when the user specifies how many calories or pounds they want to burn as well as suggesting max calorie intake_
 * _input: 5 pounds_
 * _output: running 3x week 20 minutes at least, eating 100 calories a day_
 
