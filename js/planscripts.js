@@ -23,91 +23,91 @@ function activityChoice (userActivity, kiloWeight, calsGoal) {
   if(userActivity === "biking"){
     $("img#bike").animate({
             left: '250px',
-            opacity: '0.5',
-            height: '200px',
-            width: '200px'
-        }, 2000, function(){$(this).removeAttr('style');});
+            opacity: '.75',
+            height: '150px',
+            width: '150px'
+        }, 2000);
     var biking = new Activity ("biking", 8.0, kiloWeight);
     return biking.timeCalculator(calsGoal);
   } else if (userActivity === "rockclimbing"){
     $("img#climb").animate({
             left: '250px',
-            opacity: '0.5',
+            opacity: '.75',
             height: '150px',
             width: '150px'
-        }, 2000, function(){$(this).removeAttr('style');});
+        }, 2000);
     var rockclimbing = new Activity ("climbing", 9.5, kiloWeight);
     return rockclimbing.timeCalculator(calsGoal);
   } else if (userActivity === "hiking") {
     $("img#hike").animate({
             left: '250px',
-            opacity: '0.5',
+            opacity: '.75',
             height: '150px',
             width: '150px'
-        }, 2000, function(){$(this).removeAttr('style');});
+        }, 2000);
     var hiking = new Activity ("hiking", 6.0, kiloWeight);
     return hiking.timeCalculator(calsGoal);
   } else if (userActivity === "running"){
     $("img#run").animate({
             left: '250px',
-            opacity: '0.5',
+            opacity: '.75',
             height: '150px',
             width: '150px'
-        }, 2000, function(){$(this).removeAttr('style');});
+        }, 2000);
     var running = new Activity ("running", 7.5, kiloWeight);
     return running.timeCalculator(calsGoal);
   } else if (userActivity === "walking"){
     $("img#walk").animate({
             left: '250px',
-            opacity: '0.5',
+            opacity: '.75',
             height: '150px',
             width: '150px'
-        }, 2000, function(){$(this).removeAttr('style');});
+        }, 2000);
     var walking = new Activity ("walking", 3.8, kiloWeight);
     return walking.timeCalculator(calsGoal);
   } else if (userActivity === "do yoga"){
     $("img#yoga").animate({
             left: '250px',
-            opacity: '0.5',
+            opacity: '.75',
             height: '150px',
             width: '150px'
-        }, 2000, function(){$(this).removeAttr('style');});
+        }, 2000);
     var yoga = new Activity ("yoga", 3.0, kiloWeight);
     return yoga.timeCalculator(calsGoal);
   } else if (userActivity === "snowboarding"){
     $("img#snowboard").animate({
             left: '250px',
-            opacity: '0.5',
+            opacity: '.75',
             height: '150px',
             width: '150px'
-        }, 2000, function(){$(this).removeAttr('style');});
+        }, 2000);
     var snowboarding = new Activity ("snowboarding", 7.0, kiloWeight);
     return snowboarding.timeCalculator(calsGoal);
   } else if (userActivity === "watch sports"){
     $("img#watch").animate({
             left: '250px',
-            opacity: '0.5',
+            opacity: '.75',
             height: '150px',
             width: '150px'
-        }, 2000, function(){$(this).removeAttr('style');});
+        }, 2000);
     var watchingSports = new Activity ("watching", 1.5, kiloWeight);
     return watchingSports.timeCalculator(calsGoal);
   } else if (userActivity === "grocery shopping"){
     $("img#grocery").animate({
             left: '250px',
-            opacity: '0.5',
+            opacity: '.75',
             height: '150px',
             width: '150px'
-        }, 2000, function(){$(this).removeAttr('style');});
+        }, 2000);
     var groceryShopping = new Activity ("grocery", 2.10, kiloWeight);
     return groceryShopping.timeCalculator(calsGoal);
   } else if (userActivity === "to epicodus class"){
     $("img#epicodus").animate({
             left: '250px',
-            opacity: '0.5',
+            opacity: '.75',
             height: '150px',
             width: '150px'
-        }, 2000, function(){$(this).removeAttr('style');});
+        }, 2000);
     var takingEpicodusClass = new Activity ("epicodus", 2.17, kiloWeight);
     return takingEpicodusClass.timeCalculator(calsGoal);
   };
