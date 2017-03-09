@@ -9,9 +9,9 @@
 _A website that allows user to input of height, weight, activity, and age, to find out their burned calories._
 
 ## Link to repository and GH-pages
-
-* _https://ziggity.github.io/calorieTracker/_
 * _GH-Pages link here_
+* _https://ziggity.github.io/calorieTracker/_
+
 
 ## Specs
 
