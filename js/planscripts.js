@@ -65,6 +65,11 @@ function bmr (gender, weight, height, age) {
   };
 };
 
+function bmi (weight, height) {
+  var userBmi = (weight * 703)/(height*height);
+  console.log(userBmi);
+  return userBmi;
+};
 
 
 $(document).ready(function(){
@@ -85,6 +90,8 @@ $(document).ready(function(){
     var timeNeededToWorkout = Math.ceil(activityChoice(preferredActivity, kiloWeight, calsGoal));
     var userBMR = Math.ceil(bmr(userGender,userWeight,userHeight,userAge));
     console.log(userBMR);
+    var userBMI = Math.ceil(bmi(userWeight,userHeight));
+    console.log(userBMI);
     if ((firstName === "") || (lastName === "") || ($("#userScaleWeight").val()==="") || (preferredActivity === "") || ($("#userPoundInput").val()==="") || ($("#age").val()==="")){
       alert ("Oops, please enter values in all fields.");
     } else {
@@ -93,13 +100,13 @@ $(document).ready(function(){
         var hoursLeftOver = timeNeededToWorkout%6;
         $("#result").empty();
         $("#result").show();
-        $("#result").append('<h3>Congratulations, ' + fullName + "!</h3><p>We're here to help you meet your goals! Given your goal of losing " + poundsGoal + ' pounds, you will want to go ' + preferredActivity + ' for a total of ' + timeNeededToWorkout + " hours. Don't worry!  This can be broken up into three sessions a week for two hours per session.  Keep this up for " + weeksOfWorkout + ' weeks and ' + hoursLeftOver + " hours and you'll reach your goal!  However, we've also calculated your Basal Metabolic Rate so be sure to maintain a healthy diet and never exceed " + userBMR + " calories per day!</p>");
+        $("#result").append('<h3>Congratulations, ' + fullName + "!</h3><p>We're here to help you meet your goals! Given your goal of losing " + poundsGoal + ' pounds, you will want to go ' + preferredActivity + ' for a total of ' + timeNeededToWorkout + " hours. Don't worry!  This can be broken up into three sessions a week for two hours per session.  Keep this up for " + weeksOfWorkout + ' weeks and ' + hoursLeftOver + " hours and you'll reach your goal!  However, we've also calculated your Basal Metabolic Rate so be sure to maintain a healthy diet and never exceed " + userBMR + " calories per day! And also we calculated your BMI, body mass index:" +'<strong>'+ userBMI +'</strong>'+ ".</p><p>Note: If your BMI is less than 18.5, that is considered to be underweight. If your BMI is between 18.5-24.9, that is considered to be normal. If your BMI is between 25-29.9, that is considered to be overweight. If your BMI is over 30, that is considered to be obese.</p>");
       } else if (userAge >= 50) {
         $("#result").empty();
         $("#result").show();
         var weeksOfWorkout = parseInt(timeNeededToWorkout/4);
         var hoursLeftOver = timeNeededToWorkout%4;
-        $("#result").append('<h3>Congratulations, ' + fullName + "!</h3><p>We're here to help you meet your goals! Given your goal of losing " + poundsGoal + ' pounds, you will want to go ' + preferredActivity + ' for a total of ' + timeNeededToWorkout + " hours. Don't worry!  This can be broken up into two sessions a week for two hours per session.  Keep this up for " + weeksOfWorkout + ' weeks and ' + hoursLeftOver + " hours and you'll reach your goal!  However, we've also calculated your Basal Metabolic Rate so be sure to maintain a healthy diet and never exceed " + userBMR + " calories per day!</p>");
+        $("#result").append('<h3>Congratulations, ' + fullName + "!</h3><p>We're here to help you meet your goals! Given your goal of losing " + poundsGoal + ' pounds, you will want to go ' + preferredActivity + ' for a total of ' + timeNeededToWorkout + " hours. Don't worry!  This can be broken up into two sessions a week for two hours per session.  Keep this up for " + weeksOfWorkout + ' weeks and ' + hoursLeftOver + " hours and you'll reach your goal!  However, we've also calculated your Basal Metabolic Rate so be sure to maintain a healthy diet and never exceed " + userBMR + " calories per day! And also we calculated your BMI, body mass index: " + '<strong>' + userBMI + '</strong>' + ".</p><p>Note: If your BMI is less than 18.5, that is considered to be underweight. If your BMI is between 18.5-24.9, that is considered to be normal. If your BMI is between 25-29.9, that is considered to be overweight. If your BMI is over 30, that is considered to be obese.</p>");
       };
     };
   });
